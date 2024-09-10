@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Responsive Navbar | Tailwind CSS</title>
+
+        <!-- tailwind output file -->
+        <link rel="stylesheet" href="./build/style.css" />
+
+        <!-- fontawesome kit link -->
+        <script
+            src="https://kit.fontawesome.com/6cd5ed4aa9.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body class="font-outfit">
+        <header
+            class="h-[80vh] bg-gradient-to-b from-gradient from-10% to-transparent"
+        >
+            <div class="h-5 hidden lg:block"></div>
+
+            <!-- navbar -->
+            <section
+                id="navbar"
+                class="max-w-[1140px] mx-auto bg-white flex items-center justify-between py-2.5 px-3 lg:rounded-lg lg:px-5 shadow-sm"
+            >
+                <div id="logo" class="text-3xl lg:text-4xl font-semibold">
+                    Abrar<span class="text-primary">Yeasir</span>
+                </div>
+                <nav>
+                    <ul class="hidden md:flex gap-5 text-lg">
+                        <li class="hover:text-primary"><a href="#">Home</a></li>
+                        <li class="hover:text-primary">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="hover:text-primary">
+                            <a href="#">Skills</a>
+                        </li>
+                        <li class="hover:text-primary">
+                            <a href="#">Projects</a>
+                        </li>
+                        <li class="hover:text-primary">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a
+                    href="https://www.linkedin.com/in/abraryeasir-ai/"
+                    target="_blank"
+                    class="hidden md:flex border-2 border-primary py-2 px-6 rounded-b-xl rounded-tr-xl gap-3 items-center font-medium text-primary hover:shadow-gradient hover:shadow-lg"
+                    >Let's Talk <img class="h-4" src="./images/top-right.png"
+                /></a>
+
+                <button
+                    id="mobile-hamburger-button"
+                    class="block md:hidden text-2xl"
+                    onclick="toggleNavBar()"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <section
+                    id="nav-on-mobile"
+                    class="hidden fixed top-0 left-0 w-screen h-screen bg-white"
+                >
+                    <div class="py-2.5 px-3 flex items-center justify-between">
+                        <div
+                            id="logo"
+                            class="text-3xl lg:text-4xl font-semibold"
+                        >
+                            Abrar<span class="text-primary">Yeasir</span>
+                        </div>
+                        <button
+                            id="mobile-hamburger-button"
+                            class="block md:hidden text-3xl"
+                            onclick="toggleNavBar()"
+                        >
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+
+                    <nav>
+                        <ul class="flex flex-col gap-5 text-lg py-5 px-3">
+                            <li class="hover:text-primary">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="hover:text-primary">
+                                <a href="#">About</a>
+                            </li>
+                            <li class="hover:text-primary">
+                                <a href="#">Skills</a>
+                            </li>
+                            <li class="hover:text-primary">
+                                <a href="#">Projects</a>
+                            </li>
+                            <li class="hover:text-primary">
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="h-[2px] opacity-30 bg-primary"></div>
+
+                    <a
+                        href="https://www.linkedin.com/in/abraryeasir-ai/"
+                        target="_blank"
+                        class="flex items-center gap-3 px-3 py-5 text-xl"
+                        >Let's Talk
+                        <img class="h-4" src="./images/top-right.png"
+                    /></a>
+                </section>
+            </section>
+
+            <section id="hero" class="h-full grid place-items-center text-4xl md:text-5xl text-center font-semibold">
+                <h1>Hi, I am <span class="text-primary">Abrar</span> 👋</h1>
+            </section>
+        </header>
+
+        <!-- linking the js file -->
+        <script src="./build/script.js"></script>
+    </body>
+</html>
